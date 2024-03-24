@@ -1,0 +1,4719 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://theboogle.github.io/neighbors-documentation/General/Attributes/Player_Attributes/">
+      
+      
+        <link rel="prev" href="../Character_Attributes/">
+      
+      
+        <link rel="next" href="../Workspace_Attributes/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+    
+    
+      
+        <title>Player Attributes - Neighbors Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#player" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Neighbors Documentation" class="md-header__button md-logo" aria-label="Neighbors Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Neighbors Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Player Attributes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TheBoogle/neighbors-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Neighbors Documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome to Neighbors Documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Developer%20Handbook/1/" class="md-tabs__link">
+          
+  
+  Developer Handbook
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Character_Attributes/" class="md-tabs__link">
+          
+  
+  General
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Networking/1/" class="md-tabs__link">
+          
+  
+  Networking
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../VR%20Development/VRSupport/" class="md-tabs__link">
+          
+  
+  VR Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Neighbors Documentation" class="md-nav__button md-logo" aria-label="Neighbors Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Neighbors Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TheBoogle/neighbors-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Neighbors Documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to Neighbors Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Developer Handbook
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Handbook
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer%20Handbook/1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer%20Handbook/2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expectations & General Responsibilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer%20Handbook/3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer%20Handbook/4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Payment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer%20Handbook/5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer%20Handbook/6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Benefits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer%20Handbook/7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Additional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Development Board
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Development Board
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer%20Handbook/Development%20Board/1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lists & Their Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer%20Handbook/Development%20Board/2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Attributes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Attributes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Character_Attributes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Character Attributes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Player Attributes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Player Attributes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adminspectating" class="md-nav__link">
+    <span class="md-ellipsis">
+      AdminSpectating
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AdminSpectating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allowpartyinvitesfromall" class="md-nav__link">
+    <span class="md-ellipsis">
+      AllowPartyInvitesFromAll
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AllowPartyInvitesFromAll">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avatardeco" class="md-nav__link">
+    <span class="md-ellipsis">
+      AvatarDeco
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avatarid" class="md-nav__link">
+    <span class="md-ellipsis">
+      AvatarId
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AvatarId">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bgdeco" class="md-nav__link">
+    <span class="md-ellipsis">
+      BGDeco
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bannerdeco" class="md-nav__link">
+    <span class="md-ellipsis">
+      BannerDeco
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BannerDeco">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Credits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currentinternalmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      CurrentInternalMap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CurrentInternalMap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataloaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      DataLoaded
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disablecars" class="md-nav__link">
+    <span class="md-ellipsis">
+      DisableCars
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disablecomments" class="md-nav__link">
+    <span class="md-ellipsis">
+      DisableComments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DisableComments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disablepartyinvites" class="md-nav__link">
+    <span class="md-ellipsis">
+      DisablePartyInvites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DisablePartyInvites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disablevrragdoll" class="md-nav__link">
+    <span class="md-ellipsis">
+      DisableVRRagdoll
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disabled
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doublestar" class="md-nav__link">
+    <span class="md-ellipsis">
+      DoubleStar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemptfromanticheat" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExemptFromAntiCheat
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExemptFromAntiCheat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemptfromgrass" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExemptFromGrass
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExemptFromGrass">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eightbitpack" class="md-nav__link">
+    <span class="md-ellipsis">
+      EightBitPack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraslots" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExtraSlots
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExtraSlots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraslots2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExtraSlots2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExtraSlots2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firsttimejoining" class="md-nav__link">
+    <span class="md-ellipsis">
+      FirstTimeJoining
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FirstTimeJoining">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#friend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Friend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hidegraffiti" class="md-nav__link">
+    <span class="md-ellipsis">
+      HideGraffiti
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hidehours" class="md-nav__link">
+    <span class="md-ellipsis">
+      HideHours
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HideHours">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idleposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      IdlePosition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IdlePosition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invehicletool" class="md-nav__link">
+    <span class="md-ellipsis">
+      InVehicleTool
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infiniteskips" class="md-nav__link">
+    <span class="md-ellipsis">
+      InfiniteSkips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="InfiniteSkips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infiniteslots" class="md-nav__link">
+    <span class="md-ellipsis">
+      InfiniteSlots
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intoxication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intoxication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intoxication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invisible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invisible
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Invisible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lastreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      LastReward
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LastReward">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loaded
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matchstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      MatchStart
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matchtarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      MatchTarget
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MatchTarget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#megaparty" class="md-nav__link">
+    <span class="md-ellipsis">
+      MegaParty
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#micenabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicEnabled
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutemusic" class="md-nav__link">
+    <span class="md-ellipsis">
+      MuteMusic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MuteMusic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutetoolsounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      MuteToolSounds
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MuteToolSounds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#muteweather" class="md-nav__link">
+    <span class="md-ellipsis">
+      MuteWeather
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MuteWeather">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outfitselector" class="md-nav__link">
+    <span class="md-ellipsis">
+      OutfitSelector
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OutfitSelector">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partyid" class="md-nav__link">
+    <span class="md-ellipsis">
+      PartyId
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PartyId">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playerinvites" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlayerInvites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PlayerInvites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profilecolors" class="md-nav__link">
+    <span class="md-ellipsis">
+      ProfileColors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ProfileColors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protected
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protected">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushtotalk" class="md-nav__link">
+    <span class="md-ellipsis">
+      PushToTalk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PushToTalk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safezone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showowntag" class="md-nav__link">
+    <span class="md-ellipsis">
+      ShowOwnTag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showprofileonspawn" class="md-nav__link">
+    <span class="md-ellipsis">
+      ShowProfileOnSpawn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showtitle" class="md-nav__link">
+    <span class="md-ellipsis">
+      ShowTitle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    <span class="md-ellipsis">
+      State
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#states" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Streak
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Streak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streamermode" class="md-nav__link">
+    <span class="md-ellipsis">
+      StreamerMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    <span class="md-ellipsis">
+      Title
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Title">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uptodate" class="md-nav__link">
+    <span class="md-ellipsis">
+      UpToDate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usemasculinetitles" class="md-nav__link">
+    <span class="md-ellipsis">
+      UseMasculineTitles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vconly" class="md-nav__link">
+    <span class="md-ellipsis">
+      VCOnly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vconly2" class="md-nav__link">
+    <span class="md-ellipsis">
+      VCOnly2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verified" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verified
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verified">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voicechatenabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      VoiceChatEnabled
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VoiceChatEnabled">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Workspace_Attributes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workspace Attributes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ReplicatedStorage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            ReplicatedStorage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ReplicatedStorage/HintService/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HintService
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ReplicatedStorage/Holiday/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Holiday
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ReplicatedStorage/Ragdoll/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ragdoll
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ReplicatedStorage/Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ReplicatedStorage/Title/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Title
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ReplicatedStorage/VR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ServerScriptService
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            ServerScriptService
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerScriptService/Controller/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ServerStorage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            ServerStorage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Achievement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Achievement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Activity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Badge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Badge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/DataStore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataStore
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Filter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Games/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Games
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Party/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Party
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Prompt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Proximity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proximity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Ragdoll/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ragdoll
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Utility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/VR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Voice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Voice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_3_16" id="__nav_3_2_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/ServerStorage/Tools/Carry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Carry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Overview/Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Shop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Shop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Overview/Shop/Items/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Items
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Overview/Shop/Skins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Networking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Networking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Networking/1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Module
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Networking/Module/Client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Networking/Module/Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VR Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            VR Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VR%20Development/VRSupport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding VR support to Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Module
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VR%20Development/Module/Client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VR Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VR%20Development/Module/Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VR Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adminspectating" class="md-nav__link">
+    <span class="md-ellipsis">
+      AdminSpectating
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AdminSpectating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allowpartyinvitesfromall" class="md-nav__link">
+    <span class="md-ellipsis">
+      AllowPartyInvitesFromAll
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AllowPartyInvitesFromAll">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avatardeco" class="md-nav__link">
+    <span class="md-ellipsis">
+      AvatarDeco
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avatarid" class="md-nav__link">
+    <span class="md-ellipsis">
+      AvatarId
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AvatarId">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bgdeco" class="md-nav__link">
+    <span class="md-ellipsis">
+      BGDeco
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bannerdeco" class="md-nav__link">
+    <span class="md-ellipsis">
+      BannerDeco
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BannerDeco">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Credits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currentinternalmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      CurrentInternalMap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CurrentInternalMap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataloaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      DataLoaded
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disablecars" class="md-nav__link">
+    <span class="md-ellipsis">
+      DisableCars
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disablecomments" class="md-nav__link">
+    <span class="md-ellipsis">
+      DisableComments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DisableComments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disablepartyinvites" class="md-nav__link">
+    <span class="md-ellipsis">
+      DisablePartyInvites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DisablePartyInvites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disablevrragdoll" class="md-nav__link">
+    <span class="md-ellipsis">
+      DisableVRRagdoll
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disabled
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doublestar" class="md-nav__link">
+    <span class="md-ellipsis">
+      DoubleStar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemptfromanticheat" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExemptFromAntiCheat
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExemptFromAntiCheat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemptfromgrass" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExemptFromGrass
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExemptFromGrass">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eightbitpack" class="md-nav__link">
+    <span class="md-ellipsis">
+      EightBitPack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraslots" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExtraSlots
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExtraSlots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraslots2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExtraSlots2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExtraSlots2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firsttimejoining" class="md-nav__link">
+    <span class="md-ellipsis">
+      FirstTimeJoining
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FirstTimeJoining">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#friend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Friend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hidegraffiti" class="md-nav__link">
+    <span class="md-ellipsis">
+      HideGraffiti
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hidehours" class="md-nav__link">
+    <span class="md-ellipsis">
+      HideHours
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HideHours">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idleposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      IdlePosition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IdlePosition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invehicletool" class="md-nav__link">
+    <span class="md-ellipsis">
+      InVehicleTool
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infiniteskips" class="md-nav__link">
+    <span class="md-ellipsis">
+      InfiniteSkips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="InfiniteSkips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infiniteslots" class="md-nav__link">
+    <span class="md-ellipsis">
+      InfiniteSlots
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intoxication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intoxication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intoxication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invisible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invisible
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Invisible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lastreward" class="md-nav__link">
+    <span class="md-ellipsis">
+      LastReward
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LastReward">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loaded
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matchstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      MatchStart
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matchtarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      MatchTarget
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MatchTarget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#megaparty" class="md-nav__link">
+    <span class="md-ellipsis">
+      MegaParty
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#micenabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicEnabled
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutemusic" class="md-nav__link">
+    <span class="md-ellipsis">
+      MuteMusic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MuteMusic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutetoolsounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      MuteToolSounds
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MuteToolSounds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#muteweather" class="md-nav__link">
+    <span class="md-ellipsis">
+      MuteWeather
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MuteWeather">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outfitselector" class="md-nav__link">
+    <span class="md-ellipsis">
+      OutfitSelector
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OutfitSelector">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partyid" class="md-nav__link">
+    <span class="md-ellipsis">
+      PartyId
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PartyId">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playerinvites" class="md-nav__link">
+    <span class="md-ellipsis">
+      PlayerInvites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PlayerInvites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profilecolors" class="md-nav__link">
+    <span class="md-ellipsis">
+      ProfileColors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ProfileColors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protected" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protected
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protected">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushtotalk" class="md-nav__link">
+    <span class="md-ellipsis">
+      PushToTalk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PushToTalk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safezone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showowntag" class="md-nav__link">
+    <span class="md-ellipsis">
+      ShowOwnTag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showprofileonspawn" class="md-nav__link">
+    <span class="md-ellipsis">
+      ShowProfileOnSpawn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showtitle" class="md-nav__link">
+    <span class="md-ellipsis">
+      ShowTitle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    <span class="md-ellipsis">
+      State
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#states" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Streak
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Streak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streamermode" class="md-nav__link">
+    <span class="md-ellipsis">
+      StreamerMode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    <span class="md-ellipsis">
+      Title
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Title">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uptodate" class="md-nav__link">
+    <span class="md-ellipsis">
+      UpToDate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usemasculinetitles" class="md-nav__link">
+    <span class="md-ellipsis">
+      UseMasculineTitles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vconly" class="md-nav__link">
+    <span class="md-ellipsis">
+      VCOnly
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vconly2" class="md-nav__link">
+    <span class="md-ellipsis">
+      VCOnly2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verified" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verified
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verified">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voicechatenabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      VoiceChatEnabled
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VoiceChatEnabled">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p>Roblox <a href="https://create.roblox.com/docs/studio/instance-attributes">Attributes</a>.</p>
+<h1 id="player">Player<a class="headerlink" href="#player" title="Permanent link">🔗</a></h1>
+<p>Attributes put inside the Player Instance.</p>
+<div class="admonition warning end">
+<p class="admonition-title">Warning</p>
+<p><strong>Not all are listed!</strong></p>
+</div>
+<h2 id="adminspectating"><code>AdminSpectating</code><a class="headerlink" href="#adminspectating" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description">Description<a class="headerlink" href="#description" title="Permanent link">🔗</a></h5>
+<p>A tweak to unforce your camera to be at places if set to <code>true</code>.<br>
+A client-side based attribute.</p>
+<h2 id="allowpartyinvitesfromall"><code>AllowPartyInvitesFromAll</code><a class="headerlink" href="#allowpartyinvitesfromall" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">🔗</a></h5>
+<p>Player allows party invites from non-friends.</p>
+<h2 id="avatardeco"><code>AvatarDeco</code><a class="headerlink" href="#avatardeco" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>string</code></p>
+<h2 id="avatarid"><code>AvatarId</code><a class="headerlink" href="#avatarid" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>number</code></p>
+<h5 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">🔗</a></h5>
+<p>Profile Bio picture image ID.</p>
+<h2 id="bgdeco"><code>BGDeco</code><a class="headerlink" href="#bgdeco" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>string</code></p>
+<h2 id="bannerdeco"><code>BannerDeco</code><a class="headerlink" href="#bannerdeco" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>string</code></p>
+<h5 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">🔗</a></h5>
+<p>String ID representation of the Player's selected Banner Decoration.</p>
+<h2 id="credits"><code>Credits</code><a class="headerlink" href="#credits" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>number</code></p>
+<h5 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">🔗</a></h5>
+<p>Player Credits.</p>
+<h2 id="currentinternalmap"><code>CurrentInternalMap</code><a class="headerlink" href="#currentinternalmap" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>string</code></p>
+<h5 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">🔗</a></h5>
+<p>Contains the name of the Player's current <em>Place</em>. Can be used to find out where a Player's current queued house is at.
+<br>If the Player isn't in a house <em>(e.g. soloqueued, in-queue or other modifications)</em> it will be <code>nil</code>.</p>
+<div class="admonition info end">
+<p class="admonition-title">Info</p>
+<p>Changing this value <strong><em>only</em></strong> for the <strong>Client</strong> will load the props inside a house.<br>
+Changing this value on the <strong>Server</strong> will change the house the player is <em>supposed</em> to be in. If the player is not exempt from the anti-cheat, they will be reset.</p>
+</div>
+<div class="admonition warning end">
+<p class="admonition-title">Warning</p>
+<p>Can be <code>nil</code>, in this case empty string <code>""</code>.</p>
+</div>
+<h2 id="dataloaded"><code>DataLoaded</code><a class="headerlink" href="#dataloaded" title="Permanent link">🔗</a></h2>
+<div class="admonition note end">
+<p class="admonition-title">TODO</p>
+<p>Wat is this</p>
+</div>
+<h2 id="disablecars"><code>DisableCars</code><a class="headerlink" href="#disablecars" title="Permanent link">🔗</a></h2>
+<div class="admonition note end">
+<p class="admonition-title">TODO</p>
+<p>Wat is this</p>
+</div>
+<h2 id="disablecomments"><code>DisableComments</code><a class="headerlink" href="#disablecomments" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_6">Description<a class="headerlink" href="#description_6" title="Permanent link">🔗</a></h5>
+<p>If set to <code>true</code>, nobody can submit a comment on that Player's Bio.</p>
+<h2 id="disablepartyinvites"><code>DisablePartyInvites</code><a class="headerlink" href="#disablepartyinvites" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_7">Description<a class="headerlink" href="#description_7" title="Permanent link">🔗</a></h5>
+<p>Whether a Player has Party Invites enabled or not.</p>
+<h2 id="disablevrragdoll"><code>DisableVRRagdoll</code><a class="headerlink" href="#disablevrragdoll" title="Permanent link">🔗</a></h2>
+<div class="admonition note end">
+<p class="admonition-title">TODO</p>
+<p>Wat happens if this is true or something</p>
+</div>
+<h2 id="disabled"><code>Disabled</code><a class="headerlink" href="#disabled" title="Permanent link">🔗</a></h2>
+<div class="admonition note end">
+<p class="admonition-title">TODO</p>
+<p>WHAT IS THIS USED FOR<br>
+Someone use CTRL + F in Studio and look for <code>"Disabled"</code> and lemme know</p>
+</div>
+<h2 id="doublestar"><code>DoubleStar</code><a class="headerlink" href="#doublestar" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h2 id="exemptfromanticheat"><code>ExemptFromAntiCheat</code><a class="headerlink" href="#exemptfromanticheat" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_8">Description<a class="headerlink" href="#description_8" title="Permanent link">🔗</a></h5>
+<p>Whether a player's anti-cheat is disabled.</p>
+<h2 id="exemptfromgrass"><code>ExemptFromGrass</code><a class="headerlink" href="#exemptfromgrass" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_9">Description<a class="headerlink" href="#description_9" title="Permanent link">🔗</a></h5>
+<p>Whether a player can walk on grass.</p>
+<h2 id="eightbitpack"><code>EightBitPack</code><a class="headerlink" href="#eightbitpack" title="Permanent link">🔗</a></h2>
+<div class="admonition warning end">
+<p class="admonition-title">Warning</p>
+<p>If more Packs are added, the Attributes of the Player will be doomed.<br>
+Someone move this somewhere else 😭😭😭</p>
+</div>
+<h2 id="extraslots"><code>ExtraSlots</code><a class="headerlink" href="#extraslots" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">🔗</a></h5>
+<p>Gamepass, gives more inventory slots.</p>
+<h2 id="extraslots2"><code>ExtraSlots2</code><a class="headerlink" href="#extraslots2" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_11">Description<a class="headerlink" href="#description_11" title="Permanent link">🔗</a></h5>
+<p>Gamepass.</p>
+<h2 id="firsttimejoining"><code>FirstTimeJoining</code><a class="headerlink" href="#firsttimejoining" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_12">Description<a class="headerlink" href="#description_12" title="Permanent link">🔗</a></h5>
+<p>Whether the Player joined for the first time. Probably for the tutorial on the buttons.</p>
+<h2 id="friend"><code>Friend</code><a class="headerlink" href="#friend" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h2 id="hidegraffiti"><code>HideGraffiti</code><a class="headerlink" href="#hidegraffiti" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<div class="admonition note end">
+<p class="admonition-title">TODO</p>
+<p>Does this hide ALL Graffiti, with no issues?</p>
+</div>
+<h2 id="hidehours"><code>HideHours</code><a class="headerlink" href="#hidehours" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">🔗</a></h5>
+<p>Whether a Player's house should be hidden from the Profile Bio.</p>
+<h2 id="idleposition"><code>IdlePosition</code><a class="headerlink" href="#idleposition" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>Vector3</code></p>
+<h5 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">🔗</a></h5>
+<p>The Player's Idle Position, that is usually very high in the Sky, on Y Level: <code>4000</code></p>
+<h2 id="invehicletool"><code>InVehicleTool</code><a class="headerlink" href="#invehicletool" title="Permanent link">🔗</a></h2>
+<div class="admonition note end">
+<p class="admonition-title">TODO</p>
+<p>wat is this</p>
+</div>
+<h2 id="infiniteskips"><code>InfiniteSkips</code><a class="headerlink" href="#infiniteskips" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_15">Description<a class="headerlink" href="#description_15" title="Permanent link">🔗</a></h5>
+<p>Whether the Player has infinite skips.</p>
+<h2 id="infiniteslots"><code>InfiniteSlots</code><a class="headerlink" href="#infiniteslots" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<div class="admonition note end">
+<p class="admonition-title">TODO</p>
+<p>is this for party invite slots, or inventory?</p>
+</div>
+<h2 id="intoxication"><code>Intoxication</code><a class="headerlink" href="#intoxication" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>number</code></p>
+<h5 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">🔗</a></h5>
+<p>Something for the 17+ game. Drunk Effect.</p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>Expected values are <code>0</code> up to <code>1</code>.</p>
+</div>
+<h2 id="invisible"><code>Invisible</code><a class="headerlink" href="#invisible" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">🔗</a></h5>
+<p>If <code>true</code> hides nametag.</p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>Unsure.</p>
+</div>
+<h2 id="lastreward"><code>LastReward</code><a class="headerlink" href="#lastreward" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>number</code> (UNIX Timestamp)</p>
+<h5 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">🔗</a></h5>
+<p>A Player's last daily reward redeem.</p>
+<p>Another attribute with similar purpose would be <code>LastSantaVisit</code>.</p>
+<h2 id="loaded"><code>Loaded</code><a class="headerlink" href="#loaded" title="Permanent link">🔗</a></h2>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>wat is this</p>
+</div>
+<h2 id="matchstart"><code>MatchStart</code><a class="headerlink" href="#matchstart" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>number</code></p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>it's in some time value, but idk which one????</p>
+</div>
+<div class="admonition warning end">
+<p class="admonition-title">Warning</p>
+<p>Doesn't always exist. Can be <code>nil</code>.</p>
+</div>
+<h2 id="matchtarget"><code>MatchTarget</code><a class="headerlink" href="#matchtarget" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>string</code></p>
+<h5 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">🔗</a></h5>
+<p>The player's username that they queued up with.</p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>If it's <em>natural soloqueue</em>, they'd be queued up with themselves.<br>
+NOT to be confused with <code>soloqueue</code> command.</p>
+</div>
+<div class="admonition warning end">
+<p class="admonition-title">Warning</p>
+<p>Doesn't always exist. Can be <code>nil</code>.</p>
+</div>
+<h2 id="megaparty"><code>MegaParty</code><a class="headerlink" href="#megaparty" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>number</code></p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>unsure</p>
+</div>
+<h2 id="micenabled"><code>MicEnabled</code><a class="headerlink" href="#micenabled" title="Permanent link">🔗</a></h2>
+<div class="admonition warning end">
+<p class="admonition-title">Warning</p>
+<p>This doesn't do anything...</p>
+</div>
+<h2 id="mutemusic"><code>MuteMusic</code><a class="headerlink" href="#mutemusic" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">🔗</a></h5>
+<p>Whether Player has loading screen Music muted. <code>true</code> means it's muted.</p>
+<h2 id="mutetoolsounds"><code>MuteToolSounds</code><a class="headerlink" href="#mutetoolsounds" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">🔗</a></h5>
+<p>Whether Tool Sounds are muted.</p>
+<div class="admonition note end">
+<p class="admonition-title">TODO</p>
+<p>Technical setup for the tools for this to work</p>
+</div>
+<h2 id="muteweather"><code>MuteWeather</code><a class="headerlink" href="#muteweather" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">🔗</a></h5>
+<p>Whether Weather is muted.</p>
+<h2 id="outfitselector"><code>OutfitSelector</code><a class="headerlink" href="#outfitselector" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">🔗</a></h5>
+<p>Whether Player has access to the Outfit Selector Gamepass.</p>
+<h2 id="partyid"><code>PartyId</code><a class="headerlink" href="#partyid" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>number</code></p>
+<h4 id="description_24">Description<a class="headerlink" href="#description_24" title="Permanent link">🔗</a></h4>
+<p>The PartyId the player is in. Which is someone's UserId, e.g. the Party Leader.<br>
+The player doesn't have this if they're not in a party.</p>
+<h2 id="playerinvites"><code>PlayerInvites</code><a class="headerlink" href="#playerinvites" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>number</code></p>
+<h5 id="description_25">Description<a class="headerlink" href="#description_25" title="Permanent link">🔗</a></h5>
+<p>A Player's Roblox game invite count.</p>
+<h2 id="points"><code>Points</code><a class="headerlink" href="#points" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>number</code></p>
+<h5 id="description_26">Description<a class="headerlink" href="#description_26" title="Permanent link">🔗</a></h5>
+<p>A Player's Profile Points value.</p>
+<h2 id="profilecolors"><code>ProfileColors</code><a class="headerlink" href="#profilecolors" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_27">Description<a class="headerlink" href="#description_27" title="Permanent link">🔗</a></h5>
+<p>If a Player can modify their Profile Bio Colors.</p>
+<h2 id="protected"><code>Protected</code><a class="headerlink" href="#protected" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>number</code></p>
+<h5 id="description_28">Description<a class="headerlink" href="#description_28" title="Permanent link">🔗</a></h5>
+<p>Whether the Player can be affected by Tools. <em>(you may find some tools just to work)</em></p>
+<p>Player's that have this on <code>true</code> can be identified based on their nametag.</p>
+<p><img alt="Protected Name Tag" src="/neighbors-documentation/assets/dev_docs/protected_value_nametag.png" /></p>
+<h2 id="pushtotalk"><code>PushToTalk</code><a class="headerlink" href="#pushtotalk" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_29">Description<a class="headerlink" href="#description_29" title="Permanent link">🔗</a></h5>
+<div class="admonition info end">
+<p class="admonition-title">Info</p>
+<p>Reserved</p>
+</div>
+<h2 id="safezone"><code>Safezone</code><a class="headerlink" href="#safezone" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h2 id="showowntag"><code>ShowOwnTag</code><a class="headerlink" href="#showowntag" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>I forgor a little bit and unsure if client will make this show only, or if set by server</p>
+</div>
+<h2 id="showprofileonspawn"><code>ShowProfileOnSpawn</code><a class="headerlink" href="#showprofileonspawn" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>Why are all settings in the Player's Attributes</p>
+</div>
+<h2 id="showtitle"><code>ShowTitle</code><a class="headerlink" href="#showtitle" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>Does this even work?</p>
+</div>
+<h2 id="special"><code>Special</code><a class="headerlink" href="#special" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>No clue what this is</p>
+</div>
+<h2 id="spins"><code>Spins</code><a class="headerlink" href="#spins" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>number</code></p>
+<h5 id="description_30">Description<a class="headerlink" href="#description_30" title="Permanent link">🔗</a></h5>
+<div class="admonition note end">
+<p class="admonition-title">TODO</p>
+</div>
+<h2 id="state"><code>State</code><a class="headerlink" href="#state" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>number</code></p>
+<h5 id="description_31">Description<a class="headerlink" href="#description_31" title="Permanent link">🔗</a></h5>
+<p>A <strong><em>client-side</em></strong> based <em>control</em> for the Player. This is used to manage the behaviour of the Player.
+<br><em>e. g. if they should see the loading screen or not.</em></p>
+<div class="admonition info end">
+<p class="admonition-title">Info</p>
+<p>Changes to this value will update behaviour. See the description below.</p>
+</div>
+<h6 id="states">States<a class="headerlink" href="#states" title="Permanent link">🔗</a></h6>
+<table>
+<th>Value</th>
+<th>Name</th>
+<th>Description</th>
+<tr>
+    <td>1</td>
+    <td>Idle <i>(No Activity)</i></td>
+    <td>Player sees the loading screen and is not in any queue.</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>In-Queue</td>
+    <td>Player is in the queue and in the loading screen.</td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>Queued up</td>
+    <td>Player can see their own character and control their camera.</td>
+</tr>
+</table>
+
+<h2 id="streak"><code>Streak</code><a class="headerlink" href="#streak" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>number</code></p>
+<h5 id="description_32">Description<a class="headerlink" href="#description_32" title="Permanent link">🔗</a></h5>
+<p>The daily reward Streak. Not claiming a Daily Reward, would reset the daily reward streak.</p>
+<h2 id="streamermode"><code>StreamerMode</code><a class="headerlink" href="#streamermode" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>I think just hides leaderboard</p>
+</div>
+<h2 id="title"><code>Title</code><a class="headerlink" href="#title" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>string</code></p>
+<h5 id="description_33">Description<a class="headerlink" href="#description_33" title="Permanent link">🔗</a></h5>
+<p>A representation of the current string.</p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>It's a mystery whether, Titles have an ID or just name.</p>
+</div>
+<div class="admonition warning end">
+<p class="admonition-title">Warning</p>
+<p>Setting this value does not resolve into Custom Titles, such like "Boogle", which is <code>boogle</code>.</p>
+</div>
+<h2 id="uptodate"><code>UpToDate</code><a class="headerlink" href="#uptodate" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>checks your Windows Updates (no)</p>
+</div>
+<h2 id="usemasculinetitles"><code>UseMasculineTitles</code><a class="headerlink" href="#usemasculinetitles" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>have not experimented</p>
+</div>
+<h2 id="vconly"><code>VCOnly</code><a class="headerlink" href="#vconly" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>????</p>
+</div>
+<h2 id="vconly2"><code>VCOnly2</code><a class="headerlink" href="#vconly2" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>????</p>
+</div>
+<h2 id="verified"><code>Verified</code><a class="headerlink" href="#verified" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_34">Description<a class="headerlink" href="#description_34" title="Permanent link">🔗</a></h5>
+<p>Shows a star next to a player if set on <code>true</code>, along with playing a sound when opening their Profile Bio.</p>
+<h2 id="voicechatenabled"><code>VoiceChatEnabled</code><a class="headerlink" href="#voicechatenabled" title="Permanent link">🔗</a></h2>
+<p><strong>Type:</strong> <code>boolean</code></p>
+<h5 id="description_35">Description<a class="headerlink" href="#description_35" title="Permanent link">🔗</a></h5>
+<p>An automatic assigned value upon Player join.
+This will determine whether in a Profile Bio, it should show a 🔇 icon or not, for Player's that got Mic Suspended or have it turned off.
+Player's that have this on <code>false</code> can't hear others nor use mic.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.expand", "navigation.instant", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>

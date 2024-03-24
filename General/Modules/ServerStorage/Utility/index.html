@@ -1,0 +1,2941 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://theboogle.github.io/neighbors-documentation/General/Modules/ServerStorage/Utility/">
+      
+      
+        <link rel="prev" href="../Server/">
+      
+      
+        <link rel="next" href="../VR/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+    
+    
+      
+        <title>Utility - Neighbors Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#utility" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Neighbors Documentation" class="md-header__button md-logo" aria-label="Neighbors Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Neighbors Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Utility
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/TheBoogle/neighbors-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Neighbors Documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome to Neighbors Documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Developer%20Handbook/1/" class="md-tabs__link">
+          
+  
+  Developer Handbook
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../Attributes/Character_Attributes/" class="md-tabs__link">
+          
+  
+  General
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Networking/1/" class="md-tabs__link">
+          
+  
+  Networking
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../VR%20Development/VRSupport/" class="md-tabs__link">
+          
+  
+  VR Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Neighbors Documentation" class="md-nav__button md-logo" aria-label="Neighbors Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Neighbors Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/TheBoogle/neighbors-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Neighbors Documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to Neighbors Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Developer Handbook
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Handbook
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Developer%20Handbook/1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Developer%20Handbook/2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expectations & General Responsibilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Developer%20Handbook/3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Developer%20Handbook/4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Payment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Developer%20Handbook/5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Developer%20Handbook/6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Benefits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Developer%20Handbook/7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Additional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Development Board
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Development Board
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Developer%20Handbook/Development%20Board/1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lists & Their Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Developer%20Handbook/Development%20Board/2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Attributes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Attributes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Attributes/Character_Attributes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Character Attributes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Attributes/Player_Attributes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Player Attributes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Attributes/Workspace_Attributes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Workspace Attributes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ReplicatedStorage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            ReplicatedStorage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ReplicatedStorage/HintService/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HintService
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ReplicatedStorage/Holiday/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Holiday
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ReplicatedStorage/Ragdoll/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ragdoll
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ReplicatedStorage/Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ReplicatedStorage/Title/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Title
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ReplicatedStorage/VR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ServerScriptService
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            ServerScriptService
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ServerScriptService/Controller/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ServerStorage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            ServerStorage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Achievement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Activity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Badge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DataStore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataStore
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Filter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Games/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Games
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Party/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Party
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Prompt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Proximity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proximity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ragdoll/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ragdoll
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Utility
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Utility
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changestatinstance-instance-attrname-string-attrvalue-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      :ChangeStat(instance: Instance, attrName: string, attrValue, duration)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":ChangeStat(instance: Instance, attrName: string, attrValue, duration)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getrendercframechar-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetRenderCFrame(char: Model)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getplayersinfrontchar-model-range-angle-tool_cframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetPlayersInFront(char: Model, range, angle, tool_CFrame)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":GetPlayersInFront(char: Model, range, angle, tool_CFrame)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getnearestplayerinfrontchar-model-range-angle-tool_cframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetNearestPlayerInFront(char: Model, range, angle, tool_CFrame)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":GetNearestPlayerInFront(char: Model, range, angle, tool_CFrame)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getnearestplayerinfrontwithblacklistchar-model-range-blacklist-angle-tool_cframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetNearestPlayerInFrontWithBlacklist(char: Model, range, blacklist, angle, tool_CFrame)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":GetNearestPlayerInFrontWithBlacklist(char: Model, range, blacklist, angle, tool_CFrame)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insafezoneply-player-no_error-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      :InSafezone(ply: Player, no_error: boolean)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":InSafezone(ply: Player, no_error: boolean)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canplayerusetoolply-player-targetplayer-model-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      :CanPlayerUseTool(ply: Player, targetPlayer: Model, tool)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":CanPlayerUseTool(ply: Player, targetPlayer: Model, tool)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getplayeroftooltool-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetPlayerOfTool(tool: Tool)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":GetPlayerOfTool(tool: Tool)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gettoolbynameply-player-toolname" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetToolByName(ply: Player, toolName)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":GetToolByName(ply: Player, toolName)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playanimationchar-model-animation-tween_speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      :PlayAnimation(char: Model, animation, tween_speed)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":PlayAnimation(char: Model, animation, tween_speed)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playanimationsound-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      :PlayAnimation(sound, part)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pickrandomweightedchances" class="md-nav__link">
+    <span class="md-ellipsis">
+      :PickRandomWeighted(chances: {})
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":PickRandomWeighted(chances: {})">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jumpscareplayerjumpscarer-player-playertojumpscare-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      :JumpscarePlayer(jumpscarer: Player, playerToJumpscare : Player)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settoolcooldownply-player-tool-cooldownduration" class="md-nav__link">
+    <span class="md-ellipsis">
+      :SetToolCooldown(ply: Player, Tool, cooldownDuration)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#istoolcooldownply-player-tool-no_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      :IsToolCooldown(ply: Player, Tool, no_error)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":IsToolCooldown(ply: Player, Tool, no_error)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unequipvehicletoolply-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      :UnequipVehicleTool(ply: Player)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getstatsply-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetStats(ply: Player)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":GetStats(ply: Player)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VR/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Voice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Voice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_3_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_3_16" id="__nav_3_2_3_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_3_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3_16">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/Carry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Carry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Overview/Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Shop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Shop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Overview/Shop/Items/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Items
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Overview/Shop/Skins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Skins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Networking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Networking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Networking/1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Module
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Networking/Module/Client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Networking/Module/Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VR Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            VR Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../VR%20Development/VRSupport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding VR support to Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Module
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Module
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../VR%20Development/Module/Client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VR Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../VR%20Development/Module/Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VR Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changestatinstance-instance-attrname-string-attrvalue-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      :ChangeStat(instance: Instance, attrName: string, attrValue, duration)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":ChangeStat(instance: Instance, attrName: string, attrValue, duration)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getrendercframechar-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetRenderCFrame(char: Model)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getplayersinfrontchar-model-range-angle-tool_cframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetPlayersInFront(char: Model, range, angle, tool_CFrame)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":GetPlayersInFront(char: Model, range, angle, tool_CFrame)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getnearestplayerinfrontchar-model-range-angle-tool_cframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetNearestPlayerInFront(char: Model, range, angle, tool_CFrame)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":GetNearestPlayerInFront(char: Model, range, angle, tool_CFrame)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getnearestplayerinfrontwithblacklistchar-model-range-blacklist-angle-tool_cframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetNearestPlayerInFrontWithBlacklist(char: Model, range, blacklist, angle, tool_CFrame)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":GetNearestPlayerInFrontWithBlacklist(char: Model, range, blacklist, angle, tool_CFrame)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insafezoneply-player-no_error-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      :InSafezone(ply: Player, no_error: boolean)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":InSafezone(ply: Player, no_error: boolean)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canplayerusetoolply-player-targetplayer-model-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      :CanPlayerUseTool(ply: Player, targetPlayer: Model, tool)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":CanPlayerUseTool(ply: Player, targetPlayer: Model, tool)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getplayeroftooltool-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetPlayerOfTool(tool: Tool)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":GetPlayerOfTool(tool: Tool)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gettoolbynameply-player-toolname" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetToolByName(ply: Player, toolName)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":GetToolByName(ply: Player, toolName)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playanimationchar-model-animation-tween_speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      :PlayAnimation(char: Model, animation, tween_speed)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":PlayAnimation(char: Model, animation, tween_speed)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playanimationsound-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      :PlayAnimation(sound, part)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pickrandomweightedchances" class="md-nav__link">
+    <span class="md-ellipsis">
+      :PickRandomWeighted(chances: {})
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":PickRandomWeighted(chances: {})">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jumpscareplayerjumpscarer-player-playertojumpscare-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      :JumpscarePlayer(jumpscarer: Player, playerToJumpscare : Player)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settoolcooldownply-player-tool-cooldownduration" class="md-nav__link">
+    <span class="md-ellipsis">
+      :SetToolCooldown(ply: Player, Tool, cooldownDuration)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#istoolcooldownply-player-tool-no_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      :IsToolCooldown(ply: Player, Tool, no_error)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":IsToolCooldown(ply: Player, Tool, no_error)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unequipvehicletoolply-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      :UnequipVehicleTool(ply: Player)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getstatsply-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      :GetStats(ply: Player)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=":GetStats(ply: Player)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#returns_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="utility">Utility<a class="headerlink" href="#utility" title="Permanent link">🔗</a></h1>
+<div class="admonition info end">
+<p class="admonition-title">Info</p>
+<p><code>game.ServerStorage.Modules.Utility</code></p>
+</div>
+<h2 id="changestatinstance-instance-attrname-string-attrvalue-duration"><code>:ChangeStat(instance: Instance, attrName: string, attrValue, duration)</code><a class="headerlink" href="#changestatinstance-instance-attrname-string-attrvalue-duration" title="Permanent link">🔗</a></h2>
+<p>Utility to change Attribute values on things.</p>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">🔗</a></h3>
+<ul>
+<li><code>instance</code>: What thing should be changed</li>
+<li><code>attrName</code>: Attribute name</li>
+<li><code>attrValue</code>: What to set the value to</li>
+<li><code>duration</code>: How long it should last. Which creates the a string that is "nameTime", "Time" gets additionally added, which tracks the time, that is in os.clock() and duration.</li>
+</ul>
+<div class="admonition note end">
+<p class="admonition-title">Note</p>
+<p>Why... is it using os.clock()...</p>
+</div>
+<h2 id="getrendercframechar-model"><code>:GetRenderCFrame(char: Model)</code><a class="headerlink" href="#getrendercframechar-model" title="Permanent link">🔗</a></h2>
+<p>Returns an approximate CFrame of where the character actually is in VR.</p>
+<h2 id="getplayersinfrontchar-model-range-angle-tool_cframe"><code>:GetPlayersInFront(char: Model, range, angle, tool_CFrame)</code><a class="headerlink" href="#getplayersinfrontchar-model-range-angle-tool_cframe" title="Permanent link">🔗</a></h2>
+<p>Gets players infront of the specified character. Even for VR.</p>
+<h3 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">🔗</a></h3>
+<ul>
+<li>A table with Character Models.</li>
+</ul>
+<h2 id="getnearestplayerinfrontchar-model-range-angle-tool_cframe"><code>:GetNearestPlayerInFront(char: Model, range, angle, tool_CFrame)</code><a class="headerlink" href="#getnearestplayerinfrontchar-model-range-angle-tool_cframe" title="Permanent link">🔗</a></h2>
+<p>Similar to before, except the nearest player.</p>
+<h3 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">🔗</a></h3>
+<ul>
+<li>The nearest character model.</li>
+</ul>
+<h2 id="getnearestplayerinfrontwithblacklistchar-model-range-blacklist-angle-tool_cframe"><code>:GetNearestPlayerInFrontWithBlacklist(char: Model, range, blacklist, angle, tool_CFrame)</code><a class="headerlink" href="#getnearestplayerinfrontwithblacklistchar-model-range-blacklist-angle-tool_cframe" title="Permanent link">🔗</a></h2>
+<h3 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">🔗</a></h3>
+<ul>
+<li>The nearest character model.</li>
+</ul>
+<h2 id="insafezoneply-player-no_error-boolean"><code>:InSafezone(ply: Player, no_error: boolean)</code><a class="headerlink" href="#insafezoneply-player-no_error-boolean" title="Permanent link">🔗</a></h2>
+<p>Whether a player is in a safezone or not.</p>
+<h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">🔗</a></h3>
+<ul>
+<li><code>no_error</code>: Whether to display pop-ups <em>if or if not</em> in a safezone.</li>
+</ul>
+<h3 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">🔗</a></h3>
+<ul>
+<li><code>boolean</code>, whether in a safezone or not</li>
+</ul>
+<h2 id="canplayerusetoolply-player-targetplayer-model-tool"><code>:CanPlayerUseTool(ply: Player, targetPlayer: Model, tool)</code><a class="headerlink" href="#canplayerusetoolply-player-targetplayer-model-tool" title="Permanent link">🔗</a></h2>
+<p>Whether a player can use a tool on a specific target player.</p>
+<p>This checks things like, if the tool is on a cooldown, or if the target player, is in a safezone.</p>
+<h3 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">🔗</a></h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+<h2 id="getplayeroftooltool-tool"><code>:GetPlayerOfTool(tool: Tool)</code><a class="headerlink" href="#getplayeroftooltool-tool" title="Permanent link">🔗</a></h2>
+<p>Gets the current player of a Tool. From the Backpack or Character Model, for instance.</p>
+<h3 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">🔗</a></h3>
+<ul>
+<li><code>Player</code></li>
+</ul>
+<h2 id="gettoolbynameply-player-toolname"><code>:GetToolByName(ply: Player, toolName)</code><a class="headerlink" href="#gettoolbynameply-player-toolname" title="Permanent link">🔗</a></h2>
+<p>Tries to get a tool from a player, purely based on a string name input.</p>
+<h3 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">🔗</a></h3>
+<ul>
+<li><code>Tool</code> or <code>nil</code> if not found.</li>
+</ul>
+<h2 id="playanimationchar-model-animation-tween_speed"><code>:PlayAnimation(char: Model, animation, tween_speed)</code><a class="headerlink" href="#playanimationchar-model-animation-tween_speed" title="Permanent link">🔗</a></h2>
+<h3 id="returns_7">Returns<a class="headerlink" href="#returns_7" title="Permanent link">🔗</a></h3>
+<ul>
+<li><code>AnimationTrack</code></li>
+</ul>
+<h2 id="playanimationsound-part"><code>:PlayAnimation(sound, part)</code><a class="headerlink" href="#playanimationsound-part" title="Permanent link">🔗</a></h2>
+<p>Plays a sound on a part. The sound gets cloned and then returned <em>(note that it's on a Debris through this function)</em>.</p>
+<h2 id="pickrandomweightedchances"><code>:PickRandomWeighted(chances: {})</code><a class="headerlink" href="#pickrandomweightedchances" title="Permanent link">🔗</a></h2>
+<p>Picks a random weighted value from a given table.</p>
+<h3 id="returns_8">Returns<a class="headerlink" href="#returns_8" title="Permanent link">🔗</a></h3>
+<p>Should return the picked <strong>key</strong>.</p>
+<details class="example end" open="open">
+<summary>Example Table</summary>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="n">chances</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">Good</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">Bad</span> <span class="o">=</span> <span class="mi">40</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
+</span></code></pre></div>
+</details>
+<h2 id="jumpscareplayerjumpscarer-player-playertojumpscare-player"><code>:JumpscarePlayer(jumpscarer: Player, playerToJumpscare : Player)</code><a class="headerlink" href="#jumpscareplayerjumpscarer-player-playertojumpscare-player" title="Permanent link">🔗</a></h2>
+<p>Jumpscares a player.</p>
+<h2 id="settoolcooldownply-player-tool-cooldownduration"><code>:SetToolCooldown(ply: Player, Tool, cooldownDuration)</code><a class="headerlink" href="#settoolcooldownply-player-tool-cooldownduration" title="Permanent link">🔗</a></h2>
+<p>Sets a cooldown on a tool for the backpack system.</p>
+<h2 id="istoolcooldownply-player-tool-no_error"><code>:IsToolCooldown(ply: Player, Tool, no_error)</code><a class="headerlink" href="#istoolcooldownply-player-tool-no_error" title="Permanent link">🔗</a></h2>
+<p>Checks if a tool has a cooldown.</p>
+<h3 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">🔗</a></h3>
+<ul>
+<li><code>no_error</code> won't play an error sound if set to <code>true</code>.</li>
+</ul>
+<h3 id="returns_9">Returns<a class="headerlink" href="#returns_9" title="Permanent link">🔗</a></h3>
+<ul>
+<li>A folder. Unsure about its use.</li>
+</ul>
+<h2 id="unequipvehicletoolply-player"><code>:UnequipVehicleTool(ply: Player)</code><a class="headerlink" href="#unequipvehicletoolply-player" title="Permanent link">🔗</a></h2>
+<div class="admonition info end">
+<p class="admonition-title">Info</p>
+<p>Unsure</p>
+</div>
+<h2 id="getstatsply-player"><code>:GetStats(ply: Player)</code><a class="headerlink" href="#getstatsply-player" title="Permanent link">🔗</a></h2>
+<h3 id="returns_10">Returns<a class="headerlink" href="#returns_10" title="Permanent link">🔗</a></h3>
+<ul>
+<li>Something like <code>typeof(ServerStorage.Modules.DataStore.Default)</code> it's a folder structure. Most likely the Player Stats.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.expand", "navigation.instant", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>
